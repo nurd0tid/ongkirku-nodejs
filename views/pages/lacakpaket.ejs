@@ -1,0 +1,117 @@
+<%- include('../partials/head'); %>
+  <%- include('../partials/header'); %>
+    <%- include('../partials/sidebar'); %>
+
+      <main id="main" class="main">
+
+        <div class="pagetitle">
+          <h1>Lacak Pengiriman</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item">Pages</li>
+              <li class="breadcrumb-item active">Lacak Pengiriman</li>
+            </ol>
+          </nav>
+        </div>
+
+        <section class="sectio dashboard">
+          <div class="row">
+            <div class="col-lg-8">
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Track package now</h5>
+
+                  <!-- General Form Elements -->
+                  <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Resi</label>
+                    <div class="col-sm-10">
+                      <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Enter up to 50 tracking numbers, each per line."
+                          id="floatingTextarea" style="height: 249px;"></textarea>
+                        <label for="floatingTextarea">Enter up to 50 tracking numbers, each per line.</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                          <option selected="">-- Select Carriers --</option>
+                          <option value="1">JNE</option>
+                          <option value="2">TIKI</option>
+                          <option value="3">POS Indonesia</option>
+                          <option value="4">Anter Aja</option>
+                        </select>
+                        <label for="floatingSelect">Works with carriers</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Cek Resi</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Delivered Activity</h5>
+                  <div class="activity">
+                    <div class="activity-item d-flex">
+                      <div class="activite-label">32 min</div>
+                      <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                      <div class="activity-content">
+                        Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
+                      </div>
+                    </div><!-- End activity item-->
+
+                    <div class="activity-item d-flex">
+                      <div class="activite-label">56 min</div>
+                      <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                      <div class="activity-content">
+                        Voluptatem blanditiis blanditiis eveniet
+                      </div>
+                    </div><!-- End activity item-->
+
+                    <div class="activity-item d-flex">
+                      <div class="activite-label">2 hrs</div>
+                      <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                      <div class="activity-content">
+                        Voluptates corrupti molestias voluptatem
+                      </div>
+                    </div><!-- End activity item-->
+
+                    <div class="activity-item d-flex">
+                      <div class="activite-label">1 day</div>
+                      <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
+                      <div class="activity-content">
+                        Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
+                      </div>
+                    </div><!-- End activity item-->
+
+                    <div class="activity-item d-flex">
+                      <div class="activite-label">2 days</div>
+                      <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
+                      <div class="activity-content">
+                        Est sit eum reiciendis exercitationem
+                      </div>
+                    </div><!-- End activity item-->
+
+                    <div class="activity-item d-flex">
+                      <div class="activite-label">4 weeks</div>
+                      <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
+                      <div class="activity-content">
+                        Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
+                      </div>
+                    </div><!-- End activity item-->
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+        </section>
+
+      </main><!-- End #main -->
+
+      <%- include('../partials/footer'); %>

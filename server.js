@@ -26,6 +26,10 @@ app.get('/cekongkir', function(req, res) {
     res.render('pages/cekongkir');
 });
 
+app.get('/cekresi', function(req, res) {
+    res.render('pages/lacakpaket');
+});
+
 // Definisikan Router pada path "/api"
 app.use('/apiOngkir', apiRouter)
 

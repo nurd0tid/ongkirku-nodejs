@@ -1,103 +1,105 @@
 <%- include('../partials/head'); %>
-  <%- include('../partials/header'); %>
-    <%- include('../partials/sidebar'); %>
 
-      <main id="main" class="main">
+  <body onload="loadProvinsi()">
+    <%- include('../partials/header'); %>
+      <%- include('../partials/sidebar'); %>
 
-        <div class="pagetitle">
-          <h1>Cek Ongkir</h1>
-          <nav>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item">Pages</li>
-              <li class="breadcrumb-item active">Cek Ongkir</li>
-            </ol>
-          </nav>
-        </div><!-- End Page Title -->
-        <section class="section">
-          <div class="row" id="loadProvinsi">
-            <div class="col-lg-6">
+        <main id="main" class="main">
 
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Cek Ongkir</h5>
+          <div class="pagetitle">
+            <h1>Cek Ongkir</h1>
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">Pages</li>
+                <li class="breadcrumb-item active">Cek Ongkir</li>
+              </ol>
+            </nav>
+          </div><!-- End Page Title -->
+          <section class="section">
+            <div class="row" id="loadProvinsi">
+              <div class="col-lg-6">
 
-                  <!-- Horizontal Form -->
-                  <div class="text-center">
-                    <h6><b>Asal Paket</b></h6>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Provinsi</label>
-                    <div class="col-sm-10">
-                      <select id="prov1" onchange="loadKota(this.value, 'kot1')" class="form-select">
-                        <option value="" selected="" disabled="">-- Pilih Provinsi --</option>
-                      </select>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Cek Ongkir</h5>
+
+                    <!-- Horizontal Form -->
+                    <div class="text-center">
+                      <h6><b>Asal Paket</b></h6>
+                    </div>
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Provinsi</label>
+                      <div class="col-sm-10">
+                        <select id="prov1" onchange="loadKota(this.value, 'kot1')" class="form-select">
+                          <option value="" selected="" disabled="">-- Pilih Provinsi --</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Kota</label>
+                      <div class="col-sm-10">
+                        <select id="kot1" class="form-select">
+                          <option value="" selected="" disabled="">-- Pilih Kota --</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <h6><b>Tujuan Paket</b></h6>
+                    </div>
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Provinsi</label>
+                      <div class="col-sm-10">
+                        <select id="prov2" onchange="loadKota(this.value, 'kot2')" class="form-select">
+                          <option value="" selected="" disabled="">-- Pilih Provinsi --</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Kota</label>
+                      <div class="col-sm-10">
+                        <select id="kot2" class="form-select">
+                          <option value="" selected="" disabled="">-- Pilih Kota --</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <h6><b>Cek Ongkos</b></h6>
+                    </div>
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Berat</label>
+                      <div class="col-sm-10">
+                        <input type="number" id="berat" min="1000" step="100" value="1000" class="form-control">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Kurir</label>
+                      <div class="col-sm-10">
+                        <select id="kurir" class="form-select">
+                          <option value="" selected="" disabled="">-- Pilih Kurir --</option>
+                          <option value="jne">JNE</option>
+                          <option value="pos">POS Indonesia</option>
+                          <option value="tiki">TIKI</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button onclick="cekOngkir()" class="btn btn-primary">Cek Ongkir</button>
+                      <button type="reset" class="btn btn-secondary">Reset</button>
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Kota</label>
-                    <div class="col-sm-10">
-                      <select id="kot1" class="form-select">
-                        <option value="" selected="" disabled="">-- Pilih Kota --</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <h6><b>Tujuan Paket</b></h6>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Provinsi</label>
-                    <div class="col-sm-10">
-                      <select id="prov2" onchange="loadKota(this.value, 'kot2')" class="form-select">
-                        <option value="" selected="" disabled="">-- Pilih Provinsi --</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Kota</label>
-                    <div class="col-sm-10">
-                      <select id="kot2" class="form-select">
-                        <option value="" selected="" disabled="">-- Pilih Kota --</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <h6><b>Cek Ongkos</b></h6>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Berat</label>
-                    <div class="col-sm-10">
-                      <input type="number" id="berat" min="1000" step="100" value="1000" class="form-control">
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Kurir</label>
-                    <div class="col-sm-10">
-                      <select id="kurir" class="form-select">
-                        <option value="" selected="" disabled="">-- Pilih Kurir --</option>
-                        <option value="jne">JNE</option>
-                        <option value="pos">POS Indonesia</option>
-                        <option value="tiki">TIKI</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <button onclick="cekOngkir()" class="btn btn-primary">Cek Ongkir</button>
-                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Estimasi & Harga</h5>
+                    <div id="hasil"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Estimasi & Harga</h5>
-                  <div id="hasil"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main><!-- End #main -->
+          </section>
+        </main><!-- End #main -->
 
-      <%- include('../partials/footer'); %>
+        <%- include('../partials/footer'); %>
