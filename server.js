@@ -3,7 +3,9 @@ const express = require('express')
 const path = require('path')
 const cors = require('cors')
 const app = express()
-const apiRouter = require('./routes/apiOngkir')
+const apiRouter = require('./routes/apiResi')
+const api1Router = require('./routes/apiOngkir')
+
 
 app.use(cors())
 app.use(express.json())
@@ -31,7 +33,8 @@ app.get('/cekresi', function(req, res) {
 });
 
 // Definisikan Router pada path "/api"
-app.use('/apiOngkir', apiRouter)
+app.use('/apiResi', apiRouter)
+app.use('/apiOngkir', api1Router)
 
 app.listen(8080);
 console.log('8080 is the magic port');
